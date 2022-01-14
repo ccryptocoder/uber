@@ -13,7 +13,14 @@ gulp.task('server', function() {
 
 gulp.task('styles', function(){
     return gulp.src('src/sass/*.+(sass|scss)')
-            .pipe(sass())
+            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(gulp.dest('src/css'))
             .pipe(browserSync.stream());
-})
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/sass/*.+(sass|scss)', gulp.parallel('styles'));
+    gulp.watch('src/*.html').on('change', browserSync.reload());
+});
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
