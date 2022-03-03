@@ -1,29 +1,29 @@
 {
-  "name": "lecture26_practice",
+  "name": "uber",
   "version": "1.0.0",
-  "description": "uber_page",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "copy npm-shrinkwrap.gulp.json npm-shrinkwrap.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ccryptocoder/uber_project.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ccryptocoder/uber_project/issues"
-  },
-  "homepage": "https://github.com/ccryptocoder/uber_project#readme",
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.48.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
